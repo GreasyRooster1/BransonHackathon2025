@@ -14,25 +14,55 @@ class Impact{
     }
 }
 
-class PowerImpact extends Impact{
+class LightsImpact extends Impact{
     constructor(){
         super();
     }
     createContent(){
         this.elememnt.innerHTML = `
             <div class="power-impact-text">Enter the amount of time you had your lights on today</div>
-            <input class="text-input" placeholder = "Time in hours"></input>
+            <input class="glass text-input time" placeholder = "Time in hours"></input>
+        `
+    }
+}
+
+class DriveImpact extends Impact{
+    constructor(){
+        super();
+    }
+    createContent(){
+        this.elememnt.innerHTML = `
+            <div class="power-impact-text">Enter the begin and end desitnation</div>
+            <input class="glass text-input dest1" placeholder = "Time in hours"></input>
+            <input class="glass text-input dest2" placeholder = "Usage (KWh)"></input>
+        `
+    }
+}
+
+class PowerImpact extends Impact{
+    constructor(){
+        super();
+    }
+    createContent(){
+        this.elememnt.innerHTML = `
+            <div class="power-impact-text">Enter the usage amount and time</div>
+            <input class="glass text-input time" placeholder = "Time in hours"></input>
+            <input class="glass text-input usage" placeholder = "Usage (KWh)"></input>
         `
     }
 }
 
 function setupEvents(){
     document.querySelector(".new-button").addEventListener("click",()=>{
-        createImpact("power")
+        let type = document.querySelector(".type-dropdown").value
+        createImpact(type)
     })
 }
 
 function createImpact(type){
+    if(type=="lights"){
+        impacts.push(new LightsImpact());
+    }
     if(type=="power"){
         impacts.push(new PowerImpact());
     }
