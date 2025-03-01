@@ -1,5 +1,12 @@
 :root{
-    --page-background:rgb(164, 202, 202);
+    --neutral-500:#495666;
+    --neutral-600:#323F4F;
+    --neutral-700:#1A232E;
+    --neutral-800:#0C141F;
+    --neutral-900:#03080D;
+
+    --brand-500:#D335E8;
+
     --default-font: "JetBrains Mono", monospace
 }
 
@@ -12,5 +19,13 @@ body{
 .main-content{
     width: 100vw;
     height: 100vh;
-    background-color: var(--page-background);
+    background-color: var(--neutral-600);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caclulator-box{
+    border: 2px solid var(--brand-500)
 }
