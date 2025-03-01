@@ -28,9 +28,9 @@ class LightsImpact extends Impact{
         `
     }
     calculateEmmissions(){
-        let time = this.elememnt.querySelector(".time");
-        let kwhOfAllPerYear = (time*60)*67
-        let kwhPerHour = kwhOfAllPerYear/8760;
+        let time = parseFloat(this.elememnt.querySelector(".time").value);
+        let kwhOfAllPerYear = (time*60.0)*67.0
+        let kwhPerHour = kwhOfAllPerYear/8760.0;
         return kwhPerHour*0.85;
     }
 }
@@ -46,7 +46,7 @@ class DriveImpact extends Impact{
             <input id="wp2" class="glass text-input dest2" placeholder = "Destination 2"></input>
             <button class="glass calculate-button" id="calculate-button">Calculate</button>
         `
-        
+
     }
 }
 
@@ -62,10 +62,10 @@ class PowerImpact extends Impact{
         `
     }
     calculateEmmissions(){
-        let time = this.elememnt.querySelector(".time");
-        let usage = this.elememnt.querySelector(".usage");
+        let time = parseFloat(this.elememnt.querySelector(".time").value);
+        let usage = parseFloat(this.elememnt.querySelector(".usage").value);
         let kwhOfAllPerYear = (time*usage);
-        let kwhPerHour = kwhOfAllPerYear/8760;
+        let kwhPerHour = kwhOfAllPerYear/8760.0;
         return kwhPerHour*0.85;
     }
 }

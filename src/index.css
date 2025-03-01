@@ -3,13 +3,13 @@
     --neutral-600:#323F4F;
     --neutral-700:#1A232E;
     --neutral-800:#0C141F;
-    --neutral-900:#03080D;
+    --neutral-900:#020407;
 
-    --brand-300:rgb(242, 159, 253);
-    --brand-300-a:242, 159, 253;
-    --brand-500:#D335E8;
-    --brand-800:#420449;
-    --brand-900:#1D0120;
+    --brand-300:rgb(159, 253, 198);
+    --brand-300-a:159, 253, 198;
+    --brand-500:#35e85f;
+    --brand-800:#044920;
+    --brand-900:#01200d;
 
     --default-font: "JetBrains Mono", monospace;
 }
@@ -47,7 +47,7 @@ body{
 .main-content{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(32deg, var(--neutral-700) 0%, var(--neutral-800) 70%, var(--brand-900) 100%);
+    background: linear-gradient(32deg, var(--neutral-800) 0%,  var(--neutral-900) 100%);
 
     display: flex;
     justify-content: center;
