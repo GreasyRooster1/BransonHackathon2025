@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoapify Map with Icons</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([37.7749, -122.4194], 12); // Set to San Francisco
+
+        // Add Geoapify tile layer (replace with your API key)
+        const apiKey = 'YOUR_GEOAPIFY_API_KEY';
+        L.tileLayer(`https://maps.geoapify.com/v1/tile/osm-bright/{z}/{x}/{y}.png?apiKey=d3f0498fac234f7891405d986e872c52`, {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Custom marker icon
+        const customIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // Example icon URL
+            iconSize: [30, 30], // Size of the icon
+            iconAnchor: [15, 30], // Anchor point (center-bottom)
+            popupAnchor: [0, -30] // Popup position
+        });
+
+        // Add marker with icon
+        L.marker([37.7749, -122.4194], { icon: customIcon })
+            .addTo(map)
+            .bindPopup('Custom Icon Marker');
+    </script>
+</body>
+</html>
