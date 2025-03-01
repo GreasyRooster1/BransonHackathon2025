@@ -43,3 +43,19 @@ body{
     padding:10px;
 
 }
+
+.calculator-box .title{
+    font-size: 2rem;
+}
+
+.calculator-box .text-input{
+    font-size: 1.2rem;
+    border-radius:100px;
+}
+.calculator-box .text-input:active{
+    border-radius:1px var(--brand-500);
+}
+
+.calculator-box label{
+    font-size: 1.2rem;
+}

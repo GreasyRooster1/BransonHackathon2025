@@ -7,7 +7,8 @@ async function get(url){
 }
 
 async function getRouteData(locations){
-    var location_list = ""
+    let location_list = ""
+    let transportation_mode = "drive"
     locations.forEach(location => {
         location_list += location + "|"
     });
@@ -17,6 +18,7 @@ async function getRouteData(locations){
 
 
 var locations = ["37.970187520374125,-122.52218960842936","37.95609038562469,-122.50912077728964"]
-
-var data = await getRouteData(locations)
-console.log(data)
+async function test(){
+    var data = await getRouteData(locations)
+    console.log(data)
+}
