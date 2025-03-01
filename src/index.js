@@ -7,12 +7,14 @@ async function get(url){
 }
 
 async function getRouteData(locations){
-    let location_list = ""
     let transportation_mode = "drive"
-    locations.forEach(location => {
-        location_list += location + "|"
-    });
-    var data = await get(`ttps://api.geoapify.com/v1/routing?waypoints=${location_list}&mode=${transportation_mode}&apiKey=${apikey}`)
+    let location_list = locations.join("|")
+    var response = await get(`https://api.geoapify.com/v1/routing?waypoints=${location_list}&mode=${transportation_mode}&apiKey=${apikey}`)
+    var info = response.features[0].properties
+    let data = {
+        distance: info.distance,
+        time: info.time,
+    }
     return data
 }
 
@@ -22,3 +24,5 @@ async function test(){
     var data = await getRouteData(locations)
     console.log(data)
 }
+
+test()
