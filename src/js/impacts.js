@@ -29,7 +29,7 @@ class LightsImpact extends Impact{
     }
     calculateEmmissions(){
         let time = parseFloat(this.elememnt.querySelector(".time").value);
-        let kwhOfAllPerYear = (time*60.0)*67.0
+        let kwhOfAllPerYear = (time*8.0)*67.0
         let kwhPerHour = kwhOfAllPerYear/8760.0;
         return kwhPerHour*0.85;
     }
