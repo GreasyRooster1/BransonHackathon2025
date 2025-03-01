@@ -47,6 +47,7 @@ class DriveImpact extends Impact{
             <button class="glass calculate-button" id="calculate-button">Calculate</button>
             <div id="map" style="height: 300px; width: 300px;"></div>
         `
+        
     }
 }
 
@@ -63,7 +64,8 @@ class PowerImpact extends Impact{
     }
     calculateEmmissions(){
         let time = this.elememnt.querySelector(".time");
-        let kwhOfAllPerYear = (time*60)*67
+        let usage = this.elememnt.querySelector(".usage");
+        let kwhOfAllPerYear = (time*usage);
         let kwhPerHour = kwhOfAllPerYear/8760;
         return kwhPerHour*0.85;
     }
