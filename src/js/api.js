@@ -54,6 +54,31 @@ async function calculateRouteStats(){
     let wp1 = await addressToCoordinates(document.getElementById("wp1").value)
     let wp2 = await addressToCoordinates(document.getElementById("wp2").value)
     let locations = [wp1,wp2]
+    displayMap(locations)
     let data = await getRouteData(locations)
     console.log(data)
+    console.log(locations)
+}
+
+function displayMap(locations){
+    const map = L.map('map').setView([37.7749, -122.4194], 12); // Set to San Francisco
+
+    // Add Geoapify tile layer (replace with your API key)
+    L.tileLayer(`https://maps.geoapify.com/v1/tile/osm-bright/{z}/{x}/{y}.png?apiKey=${apikey}`, {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Custom marker icon
+    const customIcon = L.icon({
+        iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // Example icon URL
+        iconSize: [30, 30], // Size of the icon
+        iconAnchor: [15, 30], // Anchor point (center-bottom)
+        popupAnchor: [0, -30] // Popup position
+    });
+
+    // Add marker with icon
+    locations.forEach(location => {
+    L.marker(location.split(","), { icon: customIcon })
+        .addTo(map)
+        .bindPopup('Custom Icon Marker');})
 }
