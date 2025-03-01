@@ -16,6 +16,7 @@
 
 h1{
     color: white;
+    text-align: center;
 }
 
 body{
@@ -55,13 +56,19 @@ body{
     align-items: center;
 }
 
+.box{
+    height:70vh;
+}
+
 .ranks-panel{
     height:80vh;
     width:25vw;
+    margin:10px;
 }
 .missions-panel{
     height:80vh;
     width:30vw;
+    margin:10px;
 }
 
 .main-content{
