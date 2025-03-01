@@ -1,4 +1,3 @@
-let responses = []
 let questions = ["Do you use an EV?","Do you carpool regularly?","Do you have LED bulbs","Are you willing to imporove?"]
 let currentQuestion =0;
 function init(){
@@ -8,7 +7,7 @@ function init(){
 
 function initEvents(){
     document.querySelector(".yes").addEventListener("click",()=>{
-        responses.push("yes")
+        changeScore(10)
         nextQuestion()
     })
     document.querySelector(".no").addEventListener("click",()=>{
