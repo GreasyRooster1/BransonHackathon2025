@@ -2,7 +2,18 @@ function setupSummaryEvents(){
     document.querySelector(".submit-button").addEventListener("click",()=>{
         document.querySelector(".submit-button").classList.remove("active");
         document.querySelector(".summary").classList.add("active");
-        calculateTotalEmmissions();
+        let emmissions_total = calculateTotalEmmissions();
+        let emmissions = emmissions_total.toFixed(2);
+        let multiplier = 5;
+        let score = (120 - emmissions_total*multiplier).toFixed(0);
+        if (score<0){
+            score = 0;
+        }
+        if (score>100){
+            score = 100;
+        }
+        document.querySelector(".data").innerHTML = score
+        document.getElementById("emmissions-data").innerHTML = emmissions
     });
 }
 
@@ -12,5 +23,5 @@ function calculateTotalEmmissions(){
         console.log(impact,impact.calculateEmmissions())
         total+=impact.calculateEmmissions();
     }
-    console.log(total)
+    return total;
 }
