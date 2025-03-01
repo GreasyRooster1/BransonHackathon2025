@@ -44,8 +44,9 @@ async function calculateRouteStats(){
     let wp2 = await addressToCoordinates(document.getElementById("wp2").value)
     let locations = [wp1,wp2]
     let data = await getRouteData(locations)
+    console.log(data)
     return {
         locations:locations,
-        data:data,
+        data:data.distance,
     }
 }
