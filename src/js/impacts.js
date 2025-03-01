@@ -38,16 +38,51 @@ class LightsImpact extends Impact{
 class DriveImpact extends Impact{
     constructor(){
         super();
+        
     }
     createContent(){
+        this.id = Math.floor(Math.random()*1000000)
         this.elememnt.innerHTML = `
             <div class="power-impact-text">Enter the begin and end desitnation</div>
             <input id="wp1" class="glass text-input dest1" placeholder = "Destination 1"></input>
             <input id="wp2" class="glass text-input dest2" placeholder = "Destination 2"></input>
             <button class="glass calculate-button" id="calculate-button">Calculate</button>
-            <div id="map" style="height: 300px; width: 300px;"></div>
+            <div id=`+this.id+` style="height: 300px; width: 300px;"></div>
         `
-
+        this.elememnt.querySelector(".calculate-button").addEventListener("click",()=>{
+            calculateRouteStats().then((stats)=>{
+                console.log(stats)
+                this.displayMap(stats.locations)
+            })
+        })
+    }
+    displayMap(locations){
+        const map = L.map(this.id+"").setView([37.7749, -122.4194], 12); // Set to San Francisco
+    
+        // Add Geoapify tile layer (replace with your API key)
+        L.tileLayer(`https://maps.geoapify.com/v1/tile/osm-bright/{z}/{x}/{y}.png?apiKey=${apikey}`, {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+    
+        // Custom marker icon
+        const customIcon = L.icon({
+            iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', // Example icon URL
+            iconSize: [30, 30], // Size of the icon
+            iconAnchor: [15, 30], // Anchor point (center-bottom)
+            popupAnchor: [0, -30] // Popup position
+        });
+    
+        console.log(locations)
+        // Add marker with icon
+        locations.forEach(location => {
+            console.log(location)
+        L.marker(location.split(","), { icon: customIcon })
+            .addTo(map)
+            .bindPopup('Custom Icon Marker');})
+    }
+    calculateEmmissions(){
+        let distanceMiles = calculateRouteStats.data/1609.34;
+        return distanceMiles*0.4;
     }
 }
 
