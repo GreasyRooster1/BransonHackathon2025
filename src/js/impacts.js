@@ -21,7 +21,7 @@ class PowerImpact extends Impact{
     createContent(){
         this.elememnt.innerHTML = `
             <div class="power-impact-text">Enter the amount of time you had your lights on today</div>
-            <input class="text-input" placeholder = "Time in hours"></input>
+            <input class="glass text-input" placeholder = "Time in hours"></input>
         `
     }
 }
