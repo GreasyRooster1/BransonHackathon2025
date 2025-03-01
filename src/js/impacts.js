@@ -46,6 +46,7 @@ class DriveImpact extends Impact{
             <input id="wp2" class="glass text-input dest2" placeholder = "Destination 2"></input>
             <button class="glass calculate-button" id="calculate-button">Calculate</button>
         `
+        
     }
 }
 

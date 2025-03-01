@@ -138,6 +138,9 @@ body{
     text-align: center;
 }
 
+.submit-button{
+    display: none;
+}
 .submit-button.active{
     width:max(500px,50vh);
     padding:10px;
