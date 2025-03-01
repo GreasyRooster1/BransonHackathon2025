@@ -5,7 +5,7 @@ function setupSummaryEvents(){
         let emmissions_total = calculateTotalEmmissions();
         let emmissions = emmissions_total.toFixed(2);
         let multiplier = 5;
-        let score = (120 - emmissions_total*multiplier).toFixed(2);
+        let score = (120 - emmissions_total*multiplier).toFixed(0);
         if (score<0){
             score = 0;
         }
