@@ -11,7 +11,6 @@ function initEvents(){
         nextQuestion()
     })
     document.querySelector(".no").addEventListener("click",()=>{
-        responses.push("no")
         nextQuestion()
     })
 }
