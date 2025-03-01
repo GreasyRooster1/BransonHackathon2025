@@ -220,7 +220,7 @@ body{
 }
 .rank-stack-container{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     height:80%;
 }
 .rank-stack{
@@ -235,4 +235,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.rank-pointer{
+    position: relative;
+    width:40%;
 }
