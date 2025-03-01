@@ -11,7 +11,7 @@ function initMap() {
       panel: document.getElementById("panel"),
     });
   
-  
+    
     directionsRenderer.addListener("directions_changed", () => {
       const directions = directionsRenderer.getDirections();
   
