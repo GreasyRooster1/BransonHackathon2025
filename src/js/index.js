@@ -1,6 +1,7 @@
 function init(){
     createBlurs();
-    initMap();
+    //initMap();
+    setupEvents();
 }
 
 window.onload = init;
