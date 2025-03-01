@@ -59,6 +59,12 @@ class PowerImpact extends Impact{
             <input class="glass text-input usage" placeholder = "Usage (Watts)"></input>
         `
     }
+    calculateEmmissions(){
+        let time = this.elememnt.querySelector(".time");
+        let kwhOfAllPerYear = (time*60)*67
+        let kwhPerHour = kwhOfAllPerYear/8760;
+        return kwhPerHour*0.85;
+    }
 }
 
 function setupEvents(){
@@ -74,5 +80,8 @@ function createImpact(type){
     }
     if(type=="power"){
         impacts.push(new PowerImpact());
+    }
+    if(type=="drive"){
+        impacts.push(new DriveImpact());
     }
 }
