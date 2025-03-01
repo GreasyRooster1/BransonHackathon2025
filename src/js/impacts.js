@@ -53,6 +53,8 @@ class DriveImpact extends Impact{
             calculateRouteStats().then((stats)=>{
                 console.log(stats)
                 this.displayMap(stats.locations)
+                let distanceMiles = stats.data/1609.34;
+                this.emmission = distanceMiles*0.4;
             })
         })
     }
@@ -81,8 +83,7 @@ class DriveImpact extends Impact{
             .bindPopup('Custom Icon Marker');})
     }
     calculateEmmissions(){
-        let distanceMiles = calculateRouteStats.data/1609.34;
-        return distanceMiles*0.4;
+        return this.emmission
     }
 }
 
