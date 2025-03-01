@@ -59,9 +59,11 @@ body{
 .box{
     height:70vh;
 }
-
-.ranks-panel{
+.ranks-panel .box{
     height:80vh;
+}
+.ranks-panel{
+    height:90vh;
     width:25vw;
     margin:10px;
 }
@@ -211,4 +213,26 @@ body{
     color:var(--brand-300);
     background: rgba(var(--brand-300-a), 0.16);
     border: 1px solid rgba(var(--brand-300-a), 0.3);
+}
+.rank-image{
+    aspect-ratio: 1;
+    width:40%
+}
+.rank-stack-container{
+    display: flex;
+    flex-direction: row-reverse;
+    height:80%;
+}
+.rank-stack{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    width:40%;
+    justify-content: space-evenly;   
+}
+.rank{
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
