@@ -6,8 +6,10 @@
     --neutral-900:#03080D;
 
     --brand-500:#D335E8;
+    --brand-800:#420449;
+    --brand-900:#1D0120;
 
-    --default-font: "JetBrains Mono", monospace
+    --default-font: "JetBrains Mono", monospace;
 }
 
 body{
@@ -16,16 +18,28 @@ body{
     padding: 0;
 }
 
+.glass{
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .main-content{
     width: 100vw;
     height: 100vh;
-    background-color: var(--neutral-600);
+    background: linear-gradient(32deg, var(--neutral-700) 0%, var(--neutral-800) 70%, var(--brand-900) 100%);
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.caclulator-box{
-    border: 2px solid var(--brand-500)
+.calculator-box{
+    width:max(500px,50vh);
+    height:max(500px,50vh);
+    padding:10px;
+
 }
