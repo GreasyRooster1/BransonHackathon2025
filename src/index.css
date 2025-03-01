@@ -17,6 +17,7 @@
 body{
     font-family: var(--default-font);
     margin:0;
+    background: linear-gradient(32deg, var(--neutral-800) 0%,  var(--neutral-900) 100%);
 }
 
 .glass{
@@ -44,10 +45,22 @@ body{
     filter:blur(100px) opacity(.1);
 }
 
+.panel-container{
+    display: flex;
+}
+
+.ranks-panel{
+    height:100vh;
+    width:20vw;
+}
+.missions-panel{
+    height:100vh;
+    width:20vw;
+}
+
 .main-content{
-    width: 100vw;
+    width: 60vw;
     height: 100vh;
-    background: linear-gradient(32deg, var(--neutral-800) 0%,  var(--neutral-900) 100%);
 
     display: flex;
     justify-content: center;
@@ -66,6 +79,7 @@ body{
 
 .calculator-box .title{
     font-size: 2rem;
+    color:#fff;
 }
 
 .text-input{
@@ -159,4 +173,7 @@ body{
     flex-direction: column;
     font-size: 1.5rem;
     text-align: center;
+}
+.big-button{
+
 }
