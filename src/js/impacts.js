@@ -42,8 +42,9 @@ class DriveImpact extends Impact{
     createContent(){
         this.elememnt.innerHTML = `
             <div class="power-impact-text">Enter the begin and end desitnation</div>
-            <input class="glass text-input dest1" placeholder = "Destination 1"></input>
-            <input class="glass text-input dest2" placeholder = "Destination 2"></input>
+            <input id="wp1" class="glass text-input dest1" placeholder = "Destination 1"></input>
+            <input id="wp2" class="glass text-input dest2" placeholder = "Destination 2"></input>
+            <button class="glass calculate-button" id="calculate-button">Calculate</button>
         `
     }
 }

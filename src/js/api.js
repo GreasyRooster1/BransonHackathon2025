@@ -20,6 +20,7 @@ async function getRouteData(locations){
 
 
 var locations = ["37.970187520374125,-122.52218960842936","37.95609038562469,-122.50912077728964"]
+
 async function test(){
     var data = await getRouteData(locations)
     var l = await addressToCoordinates("San Francisco")
@@ -38,4 +39,21 @@ async function addressToCoordinates(address){
     return coordinates
 }
 
-test()
+
+
+
+// calculate upon button press
+
+document.onclick= function(event) {
+    if(event.target.classList.contains("calculate-button")){
+        calculateRouteStats()
+    }
+}
+    
+async function calculateRouteStats(){
+    let wp1 = await addressToCoordinates(document.getElementById("wp1").value)
+    let wp2 = await addressToCoordinates(document.getElementById("wp2").value)
+    let locations = [wp1,wp2]
+    let data = await getRouteData(locations)
+    console.log(data)
+}
