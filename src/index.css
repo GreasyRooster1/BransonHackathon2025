@@ -18,23 +18,32 @@ body{
     font-family: var(--default-font);
     margin:0;
     padding: 0;
+    overflow: hidden;
 }
 
 .glass{
     background: rgba(255, 255, 255, 0.16);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.5px);
+    backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(8.5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bg-blurs{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;  
+    overflow: clip;
 }
 
 .blur{
     position:absolute;
     background:var(--brand-500);
     border-radius: 1000px;
-    filter:blur(50px)
-    width:
+    filter:blur(100px) opacity(.1);
 }
 
 .main-content{
@@ -60,11 +69,11 @@ body{
 
 .calculator-box .text-input{
     font-size: 1.2rem;
-    border-radius:100px;
+    border-radius:20px;
+    transition:.5s
 }
 .calculator-box .text-input:focus{
-    border:1px solid var(--brand-300);
-    background: rgba(var(--brand-300-a), 0.16);
+    border-radius:3px;
     outline:none;
 }
 

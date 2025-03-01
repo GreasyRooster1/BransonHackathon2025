@@ -9,5 +9,10 @@ function createBlur(){
     el.className = "blur"
     el.style.top = (Math.random()*100)+"vh";
     el.style.left = (Math.random()*100)+"vw";
+
+    let size = 200+Math.random()*400;
+    el.style.width = size+"px";
+    el.style.height = size+"px";
+
     return el
 }
