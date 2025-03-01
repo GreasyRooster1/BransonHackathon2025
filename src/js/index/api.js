@@ -50,3 +50,16 @@ async function calculateRouteStats(){
         data:data.distance,
     }
 }
+
+function changeScore(val){
+    let score = localStorage.getItem("score");
+    if(score==null){
+        localStorage.setItem("score",val);
+    }else{
+        localStorage.setItem("score",localStorage.getItem("score")+val);
+    }
+}
+
+function getScore(){
+    return localStorage.getItem("score");
+}
