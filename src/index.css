@@ -5,6 +5,8 @@
     --neutral-800:#0C141F;
     --neutral-900:#03080D;
 
+    --brand-300:rgb(242, 159, 253);
+    --brand-300-a:242, 159, 253;
     --brand-500:#D335E8;
     --brand-800:#420449;
     --brand-900:#1D0120;
@@ -52,8 +54,10 @@ body{
     font-size: 1.2rem;
     border-radius:100px;
 }
-.calculator-box .text-input:active{
-    border-radius:1px var(--brand-500);
+.calculator-box .text-input:focus{
+    border:1px solid var(--brand-300);
+    background: rgba(var(--brand-300-a), 0.16);
+    outline:none;
 }
 
 .calculator-box label{
