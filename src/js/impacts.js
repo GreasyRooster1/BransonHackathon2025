@@ -12,6 +12,9 @@ class Impact{
     createContent(){
 
     }
+    calculateEmmissions(){
+
+    }
 }
 
 class LightsImpact extends Impact{
@@ -24,6 +27,12 @@ class LightsImpact extends Impact{
             <input class="glass text-input time" placeholder = "Time in hours"></input>
         `
     }
+    calculateEmmissions(){
+        let time = this.elememnt.querySelector(".time");
+        let kwhOfAllPerYear = (time*60)*67
+        let kwhPerHour = kwhOfAllPerYear/8760;
+        return kwhPerHour*0.85;
+    }
 }
 
 class DriveImpact extends Impact{
@@ -33,8 +42,8 @@ class DriveImpact extends Impact{
     createContent(){
         this.elememnt.innerHTML = `
             <div class="power-impact-text">Enter the begin and end desitnation</div>
-            <input class="glass text-input dest1" placeholder = "Time in hours"></input>
-            <input class="glass text-input dest2" placeholder = "Usage (KWh)"></input>
+            <input class="glass text-input dest1" placeholder = "Destination 1"></input>
+            <input class="glass text-input dest2" placeholder = "Destination 2"></input>
         `
     }
 }
@@ -45,9 +54,9 @@ class PowerImpact extends Impact{
     }
     createContent(){
         this.elememnt.innerHTML = `
-            <div class="power-impact-text">Enter the usage amount and time</div>
+            <div class="power-impact-text">Enter the wattage amount and time</div>
             <input class="glass text-input time" placeholder = "Time in hours"></input>
-            <input class="glass text-input usage" placeholder = "Usage (KWh)"></input>
+            <input class="glass text-input usage" placeholder = "Usage (Watts)"></input>
         `
     }
 }
