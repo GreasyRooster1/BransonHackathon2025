@@ -29,6 +29,14 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.blur{
+    position:absolute;
+    background:var(--brand-500);
+    border-radius: 1000px;
+    filter:blur(50px)
+    width:
+}
+
 .main-content{
     width: 100vw;
     height: 100vh;
