@@ -56,10 +56,10 @@ function changeScore(val){
     if(score==null){
         localStorage.setItem("score",val);
     }else{
-        localStorage.setItem("score",localStorage.getItem("score")+val);
+        localStorage.setItem("score",parseInt(localStorage.getItem("score"))+val);
     }
 }
 
 function getScore(){
-    return localStorage.getItem("score");
+    return parseInt(localStorage.getItem("score"));
 }
