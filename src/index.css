@@ -1,0 +1,16 @@
+:root{
+    --page-background:rgb(164, 202, 202);
+    --default-font: "JetBrains Mono", monospace
+}
+
+body{
+    font-family: var(--default-font);
+    margin:0;
+    padding: 0;
+}
+
+.main-content{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--page-background);
+}
