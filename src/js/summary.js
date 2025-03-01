@@ -4,7 +4,14 @@ function setupSummaryEvents(){
         document.querySelector(".summary").classList.add("active");
         let emmissions_total = calculateTotalEmmissions();
         let emmissions = emmissions_total.toFixed(2);
-        let score = 5
+        let multiplier = 5;
+        let score = (120 - emmissions_total*multiplier).toFixed(2);
+        if (score<0){
+            score = 0;
+        }
+        if (score>100){
+            score = 100;
+        }
         document.querySelector(".data").innerHTML = score
         document.getElementById("emmissions-data").innerHTML = emmissions
     });
