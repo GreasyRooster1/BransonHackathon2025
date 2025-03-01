@@ -22,7 +22,20 @@ async function getRouteData(locations){
 var locations = ["37.970187520374125,-122.52218960842936","37.95609038562469,-122.50912077728964"]
 async function test(){
     var data = await getRouteData(locations)
+    var l = await addressToCoordinates("San Francisco")
+    console.log(l)
     console.log(data)
+
+}
+
+async function addressToCoordinates(address){
+    // unnecessarily long but ok
+    let data = await get(`https://api.geoapify.com/v1/geocode/search?text=${address}&format=json&apiKey=${apikey}`)
+    let lat = data.results[0].lat
+    let lon = data.results[0].lon
+    let coordinates_array = [lat,lon]
+    let coordinates = coordinates_array.join(",")
+    return coordinates
 }
 
 test()
