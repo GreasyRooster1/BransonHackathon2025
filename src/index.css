@@ -302,3 +302,11 @@ progress::-webkit-progress-bar {
     border-radius: 10px;
     overflow: clip;
 }
+.streak-fire{
+    aspect-ratio: 1;
+    width: 15%;
+}
+.streak{
+    display: flex;
+    justify-content: space-between;
+}
