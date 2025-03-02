@@ -17,11 +17,13 @@
 h1{
     color: white;
     text-align: center;
+    margin:5px;
 }
 
 body{
     font-family: var(--default-font);
     margin:0;
+    overflow: hidden;
     background: linear-gradient(32deg, var(--neutral-800) 0%,  var(--neutral-900) 100%);
 }
 
@@ -60,12 +62,15 @@ body{
     height:70vh;
 }
 .ranks-panel .box{
-    height:80vh;
+    height:85vh;
 }
 .ranks-panel{
-    height:90vh;
+    height:100vh;
     width:25vw;
-    margin:10px;
+    margin-left:10px;
+    margin-right:10px;
+    display: flex;
+    flex-direction: column;
 }
 .missions-panel{
     height:80vh;
@@ -221,7 +226,7 @@ body{
 .rank-stack-container{
     display: flex;
     flex-direction: row;
-    height:80%;
+    height:70%;
 }
 .rank-stack{
     position: relative;
@@ -259,4 +264,14 @@ body{
 }
 h2{
     margin:5px;
+}
+.rank-view{
+    display: flex;
+    flex-direction: column;
+}
+.rank-desc{
+    color:#fff
+}
+.small-rank{
+    width:70px;
 }
