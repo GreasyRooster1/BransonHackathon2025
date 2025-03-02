@@ -22,7 +22,6 @@ function setupSummaryEvents(){
         }else{
             response = "Perfect! Give yourself a pat on the back."
         }
-        console.log(response)
         document.querySelector(".data").innerHTML = score
         document.getElementById("emmissions-data").innerHTML = emmissions
         document.getElementById("response").innerHTML = response
