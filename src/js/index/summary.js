@@ -13,8 +13,19 @@ function setupSummaryEvents(){
             score = 100;
         }
         changeScore(score/3)
+        let response
+        if(score<30){
+            response = "Looks like a lot for one day. I believe you can crush it tomorrow."
+        }else if(score<80){
+            response = "Nice! Keep it up, planet saver."
+        }else if(score<95){
+        response = "You totally crushed it today!"
+        }else{
+            response = "Perfect! Give yourself a pat on the back."
+        }
         document.querySelector(".data").innerHTML = score
         document.getElementById("emmissions-data").innerHTML = emmissions
+        document.getElementsByClassName("response").innerHTML = response
     });
 }
 
