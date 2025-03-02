@@ -58,8 +58,14 @@ function changeScore(val){
     }else{
         localStorage.setItem("score",parseInt(localStorage.getItem("score"))+val);
     }
+    if(!window.location.href.includes("landing")){
+        updateRankVisual();
+    }
 }
 
 function getScore(){
     return parseInt(localStorage.getItem("score"));
+}
+function resetScore(){
+    localStorage.setItem("score",0);
 }

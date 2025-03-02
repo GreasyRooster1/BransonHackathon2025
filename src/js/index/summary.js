@@ -12,7 +12,7 @@ function setupSummaryEvents(){
         if (score>100){
             score = 100;
         }
-        changeScore(score)
+        changeScore(score/3)
         let response
         if(score<30){
             response = "Looks like a lot for one day. I believe you can crush it tomorrow."

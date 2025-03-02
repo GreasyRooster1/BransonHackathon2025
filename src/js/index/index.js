@@ -3,6 +3,8 @@ function init(){
     //initMap();
     setupEvents();
     setupSummaryEvents();
+    addMissionListeners();
+    updateRankVisual();
 }
 
 window.onload = init;
