@@ -21,7 +21,6 @@ function nextQuestion(){
         window.location.href = "./index.html";
         return;
     }
-    document.querySelector(".sub-title").innerHTML = questions[currentQuestion]
 }
 
 window.onload = init;
