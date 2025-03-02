@@ -4,6 +4,7 @@ function init(){
     setupEvents();
     setupSummaryEvents();
     addMissionListeners();
+    updateRankVisual();
 }
 
 window.onload = init;

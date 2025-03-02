@@ -66,3 +66,6 @@ function changeScore(val){
 function getScore(){
     return parseInt(localStorage.getItem("score"));
 }
+function resetScore(){
+    localStorage.setItem("score",0);
+}
