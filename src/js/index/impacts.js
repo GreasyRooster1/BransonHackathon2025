@@ -43,9 +43,9 @@ class DriveImpact extends Impact{
     createContent(){
         this.id = Math.floor(Math.random()*1000000)
         this.elememnt.innerHTML = `
-            <div class="power-impact-text">Enter the begin and end desitnation</div>
-            <input id="wp1" class="glass text-input dest1" placeholder = "Destination 1"></input>
-            <input id="wp2" class="glass text-input dest2" placeholder = "Destination 2"></input>
+            <div class="power-impact-text">Enter where you drove to and from</div>
+            <input id="wp1" class="glass text-input dest1" placeholder = "Start"></input>
+            <input id="wp2" class="glass text-input dest2" placeholder = "Destination"></input>
             <button class="glass calculate-button" id="calculate-button">Calculate</button>
             <div id=`+this.id+` style="height: 300px; width: 300px;"></div>
         `
