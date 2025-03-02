@@ -1,7 +1,5 @@
-function addListeners(){
-    document.getElementById("plant").addEventListener("click", function(){
+function addMissionListeners(){
+    document.getElementById("plant").addEventListener("click", ()=>{
         document.getElementById("plant-bar").value += 1;
     })
 }
-
-addListeners();

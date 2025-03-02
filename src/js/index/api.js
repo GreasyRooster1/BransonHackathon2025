@@ -58,6 +58,9 @@ function changeScore(val){
     }else{
         localStorage.setItem("score",parseInt(localStorage.getItem("score"))+val);
     }
+    if(!window.location.href.includes("landing")){
+        updateRankVisual();
+    }
 }
 
 function getScore(){

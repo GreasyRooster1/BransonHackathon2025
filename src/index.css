@@ -237,6 +237,12 @@ body{
     align-items: center;
 }
 .rank-pointer{
+    top:10%;
+    left:20%;
     position: relative;
-    width:40%;
+    width:60%;
+    display: flex;
+    font-size: 4rem;
+    color:#fff;
+    height:1%;
 }

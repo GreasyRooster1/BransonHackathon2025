@@ -3,6 +3,7 @@ function init(){
     //initMap();
     setupEvents();
     setupSummaryEvents();
+    addMissionListeners();
 }
 
 window.onload = init;
