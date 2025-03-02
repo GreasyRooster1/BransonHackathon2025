@@ -12,7 +12,6 @@ function setupSummaryEvents(){
         if (score>100){
             score = 100;
         }
-        changeScore(score/3)
         let response
         if(score<30){
             response = "Looks like a lot for one day. I believe you can crush it tomorrow."
@@ -23,9 +22,12 @@ function setupSummaryEvents(){
         }else{
             response = "Perfect! Give yourself a pat on the back."
         }
+        console.log(response)
         document.querySelector(".data").innerHTML = score
         document.getElementById("emmissions-data").innerHTML = emmissions
-        document.getElementsByClassName("response").innerHTML = response
+        document.getElementById("response").innerHTML = response
+
+        changeScore(score/3)
     });
 }
 
