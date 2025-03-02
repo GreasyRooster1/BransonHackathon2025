@@ -12,7 +12,7 @@ function setupSummaryEvents(){
         if (score>100){
             score = 100;
         }
-        changeScore(score)
+        changeScore(score/5)
         document.querySelector(".data").innerHTML = score
         document.getElementById("emmissions-data").innerHTML = emmissions
     });
