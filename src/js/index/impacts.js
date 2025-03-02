@@ -47,7 +47,7 @@ class DriveImpact extends Impact{
             <input id="wp1" class="glass text-input dest1" placeholder = "Destination 1"></input>
             <input id="wp2" class="glass text-input dest2" placeholder = "Destination 2"></input>
             <button class="glass calculate-button" id="calculate-button">Calculate</button>
-            <div id=`+this.id+` style="height: 300px; width: 300px;"></div>
+            <div id=`+this.id+` class="map" style="height: 300px; width: 300px;"></div>
         `
         this.elememnt.querySelector(".calculate-button").addEventListener("click",()=>{
             calculateRouteStats().then((stats)=>{
