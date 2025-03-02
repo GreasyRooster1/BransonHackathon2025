@@ -7,7 +7,7 @@ function init(){
 
 function initEvents(){
     document.querySelector(".yes").addEventListener("click",()=>{
-        changeScore(10)
+        changeScore(20)
         nextQuestion()
     })
     document.querySelector(".no").addEventListener("click",()=>{
